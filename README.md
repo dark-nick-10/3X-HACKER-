@@ -2,7 +2,7 @@
 
 <p align="center">
 
-<p align="center"><b>Codex Banner</b <code></code></p>
+<p align="center"><b>Codex X Banner</b <code></code></p>
 
   [![Telegram2](https://img.shields.io/badge/TELEGRAM-CHANNEL-red?style=for-the-badge&logo=telegram)](https://t.me/Codex_X_Hacker)
 
