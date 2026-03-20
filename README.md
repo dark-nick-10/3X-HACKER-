@@ -4,7 +4,7 @@
 
 <p align="center"><b>Codex Banner</b <code></code></p>
 
-  [![Telegram2](https://img.shields.io/badge/TELEGRAM-CHANNEL-red?style=for-the-badge&logo=telegram)](https://t.me/CODEX_HACKER_X)
+  [![Telegram2](https://img.shields.io/badge/TELEGRAM-CHANNEL-red?style=for-the-badge&logo=telegram)](https://t.me/Codex_X_Hacker)
 
 
 
@@ -55,4 +55,4 @@ apt update && apt upgrade -y ; pkg install git -y ; git clone https://github.com
 
 </details>
 
-  [![Telegram1](https://img.shields.io/badge/TELEGRAM-CHANNEL-red?style=for-the-badge&logo=telegram)](https://t.me/CODEX_HACKER_X)
+  [![Telegram1](https://img.shields.io/badge/TELEGRAM-CHANNEL-red?style=for-the-badge&logo=telegram)](https://t.me/Codex_X_Hacker)
