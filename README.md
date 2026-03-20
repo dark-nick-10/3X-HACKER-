@@ -1,10 +1,10 @@
-<h2 align="center"> <img src="https://raw.githubusercontent.com/DARK-H4CKER01/CODEX/refs/heads/main/files/Dx-codex.jpg" width="470" /> </h2>
+<h2 align="center"> <img src="https://files.catbox.moe/zvhw0c.jpg" width="470" /> </h2>
 
 <p align="center">
 
 <p align="center"><b>Codex Banner</b <code></code></p>
 
-  [![Telegram2](https://img.shields.io/badge/TELEGRAM-CHANNEL-red?style=for-the-badge&logo=telegram)](https://t.me/alphacodex369)
+  [![Telegram2](https://img.shields.io/badge/TELEGRAM-CHANNEL-red?style=for-the-badge&logo=telegram)](https://t.me/CODEX_HACKER_X)
 
 
 
@@ -55,4 +55,4 @@ apt update && apt upgrade -y ; pkg install git -y ; git clone https://github.com
 
 </details>
 
-  [![Telegram1](https://img.shields.io/badge/TELEGRAM-CHANNEL-red?style=for-the-badge&logo=telegram)](https://t.me/Termuxcodex)
+  [![Telegram1](https://img.shields.io/badge/TELEGRAM-CHANNEL-red?style=for-the-badge&logo=telegram)](https://t.me/CODEX_HACKER_X)
