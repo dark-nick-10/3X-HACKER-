@@ -6,12 +6,17 @@ source $HOME/.oh*/oh-my-zsh.sh
 source /data/data/com.termux/files/home/.oh-my-zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /data/data/com.termux/files/home/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 alias ls='lsd'
-alias la='lsd -lh --blocks size,name'
-alias dev='bash /$HOME/.CODEX/dev'
-alias report='bash /$HOME/.CODEX/dev'
+alias simu='gemini_run'
 alias rd='termux-reload-settings'
+alias chat='/data/data/com.termux/files/home/.toolx/chat'
+alias dev='/data/data/com.termux/files/home/.toolx/dev'
+alias report='/data/data/com.termux/files/home/.toolx/dev'
+alias update='/data/data/com.termux/files/home/.toolx/update'
+alias bname='/data/data/com.termux/files/home/.toolx/bname'
+alias help='/data/data/com.termux/files/home/.toolx/help'
+
 clear
-D1="$HOME/.termux"
+
 r='\033[91m'
 p='\033[1;95m'
 y='\033[93m'
@@ -56,52 +61,68 @@ check_disk_usage() {
 
 data=$(check_disk_usage)
 
+
 spin() {
-    local pid=$1
+clear
+banner
+    local pid=$!
     local delay=0.40
     local spinner=('█■■■■' '■█■■■' '■■█■■' '■■■█■' '■■■■█')
 
-    while ps -p $pid > /dev/null 2>/dev/null; do
+    while ps -p $pid > /dev/null; do
         for i in "${spinner[@]}"; do
             tput civis
-            echo -ne "\033[1;96m\r [+] Downloading..please wait.........\e[33m[\033[1;92m$i\033[1;93m]\033[1;0m    "
+            echo -ne "\033[1;96m\r [+] Downloading..please wait.........\e[33m[\033[1;92m$i\033[1;93m]\033[1;0m   "
             sleep $delay
             printf "\b\b\b\b\b\b\b\b"
         done
     done
-    printf "    \b\b\b\b\b"
+    printf "   \b\b\b\b\b"
     tput cnorm
     printf "\e[1;93m [Done]\e[0m\n"
     echo
     sleep 1
 }
 
+CODEX="https://codex-server-86mr.onrender.com"
+cd $HOME
+D1=".termux"
+VERSION="$D1/dx.txt"
+if [ -f "$VERSION" ]; then
+    version=$(cat "$VERSION")
+else
+    echo "version 1 1.5" > "$VERSION"
+    version=$(cat "$VERSION")
+fi
+
 banner() {
-    clear
-    echo
-    echo -e "    ${y}░█████╗░░█████╗░██████╗░███████╗██╗░░██╗"
-    echo -e "    ${y}██╔══██╗██╔══██╗██╔══██╗██╔════╝╚██╗██╔╝"
-    echo -e "    ${y}██║░░╚═╝██║░░██║██║░░██║█████╗░░░╚███╔╝░"
-    echo -e "    ${c}██║░░██╗██║░░██║██║░░██║██╔══╝░░░██╔██╗░"
-    echo -e "    ${c}╚█████╔╝╚█████╔╝██████╔╝███████╗██╔╝╚██╗"
-    echo -e "    ${c}░╚════╝░░╚════╝░╚═════╝░╚══════╝╚═╝░░╚═╝${n}"
-    echo
+clear
+echo
+echo -e "    ${y}░█████╗░░█████╗░██████╗░███████╗██╗░░██╗"
+echo -e "    ${y}██╔══██╗██╔══██╗██╔══██╗██╔════╝╚██╗██╔╝"
+echo -e "    ${y}██║░░╚═╝██║░░██║██║░░██║█████╗░░░╚███╔╝░"
+echo -e "    ${c}██║░░██╗██║░░██║██║░░██║██╔══╝░░░██╔██╗░"
+echo -e "    ${c}╚█████╔╝╚█████╔╝██████╔╝███████╗██╔╝╚██╗"
+echo -e "    ${c}░╚════╝░░╚════╝░╚═════╝░╚══════╝╚═╝░░╚═╝${n}"
+echo
 }
 
-VERSION="$D1/dx.txt"
-if [[ -n "$(cat "$VERSION")" ]]; then
-    version=$(cat "$VERSION")
-    banner
-    echo -e " ${A} ${c}Tools Updated ${n}| ${c}New ${g}$version"
-    sleep 3
-    echo "" > "$D1/dx.txt"
-    git clone https://github.com/Alpha-Codex369/CODEX.git &> /dev/null &
-    spin
-    cd CODEX
-    bash install.sh
-else
-    clear
-fi
+
+udp() {
+        messages=$(curl -s "$CODEX/check_version" | jq -r --arg vs "$version" '.[] | select(.message == $vs) | .message')
+
+        if [ -n "$messages" ]; then
+            banner
+            echo -e " ${A} ${c}Tools Updated ${n}| ${c}New ${g}$messages"
+            sleep 3
+            git clone https://github.com/Alpha-Codex369/CODEX.git &> /dev/null &
+            spin
+            cd CODEX
+            bash install.sh
+        else
+        clear
+          fi
+}
 
 load() {
 clear
@@ -126,7 +147,7 @@ DRAW() { echo -en "\033%"; echo -en "\033(0"; }
 WRITE() { echo -en "\033(B"; }
 HIDECURSOR() { echo -en "\033[?25l"; }
 NORM() { echo -en "\033[?12l\033[?25h"; }
-
+udp
 HIDECURSOR
 load
 clear
@@ -149,24 +170,22 @@ for ((i=1; i<=8; i++)); do
 done
 echo "╚${var2}╝"
 PUT 4 0
-figlet -c -f ASCII-Shadow -w $width SIMU | lolcat
+figlet -c -f ASCII-Shadow -w $width D1D4X | lolcat
 PUT 3 0
 echo -e "\033[36;1m"
 for ((i=1; i<=7; i++)); do
     echo "║"
 done
 PUT 10 ${var4}
-echo -e "\e[32m[\e[0m\uf489\e[32m] \e[36mCODEX \e[36m1.4\e[0m"
+echo -e "\e[32m[\e[0m\uf489\e[32m] \e[36mCODEX \e[36m1 1.4\e[0m"
 PUT 12 0
-ADS="$D1/ads.txt"
-if [[ -n "$(cat "$ADS")" ]]; then
-    content=$(cat "$ADS")
-    echo -e " ${g}[${n}${PKGS}${g}] ${c}Ｃｏｄｅｘ: ${g}$content"
-    echo "" > "$D1/ads.txt"
-else
-    DATE=$(date +"%Y-%b-%a ${g}—${c} %d")
-    TM=$(date +"%I:%M:%S ${g}— ${c}%p")
-    echo -e " ${g}[${n}${CAL}${g}] ${c}${TM} ${g}| ${c}${DATE}"
-fi
-NORM
+ads1=$(curl -s "$CODEX/ads" | jq -r '.[] | .message')
 
+if [ -z "$ads1" ]; then
+DATE=$(date +"%Y-%b-%a ${g}—${c} %d")
+TM=$(date +"%I:%M:%S ${g}— ${c}%p")
+echo -e " ${g}[${n}${CAL}${g}] ${c}${TM} ${g}| ${c}${DATE}"
+else
+    echo -e " ${g}[${n}${PKGS}${g}] ${c}Ｃｏｄｅｘ: ${g}$ads1"
+    fi
+NORM
