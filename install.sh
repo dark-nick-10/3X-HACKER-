@@ -1,6 +1,6 @@
 #bin/bash/'!¡
 clear
-# dx color
+# cx color
 r='\033[1;91m'
 p='\033[1;95m'
 y='\033[1;93m'
@@ -9,7 +9,7 @@ n='\033[1;0m'
 b='\033[1;94m'
 c='\033[1;96m'
 
-# dx Symbol
+# cx Symbol
 X='\033[1;92m[\033[1;00m⎯꯭̽𓆩\033[1;92m]\033[1;96m'
 D='\033[1;92m[\033[1;00m〄\033[1;92m]\033[1;93m'
 E='\033[1;92m[\033[1;00m×\033[1;92m]\033[1;91m'
@@ -18,7 +18,7 @@ C='\033[1;92m[\033[1;00m</>\033[1;92m]\033[92m'
 lm='\033[96m▱▱▱▱▱▱▱▱▱▱▱▱\033[0m〄\033[96m▱▱▱▱▱▱▱▱▱▱▱▱\033[1;00m'
 dm='\033[93m▱▱▱▱▱▱▱▱▱▱▱▱\033[0m〄\033[93m▱▱▱▱▱▱▱▱▱▱▱▱\033[1;00m'
 
-# dx icon
+# cx icon
     OS="\uf6a6"
     HOST="\uf6c3"
     KER="\uf83c"
@@ -114,15 +114,15 @@ n=$NC
 echo
 echo
 echo
-type_effect "[ 3X HACKER THEME STARTED]" 0.04
+type_effect "[ CODEX X THEME STARTED]" 0.04
 sleep 0.2
-type_effect "「HELLO DEAR USER I•M 3X HACKER 」" 0.08
+type_effect "「HELLO DEAR USER I•M CODEX X  」" 0.08
 sleep 0.5
-type_effect "【3X HACKER WILL BE PROTECT YOU】" 0.08
+type_effect "【CODEX X WILL BE PROTECT YOU】" 0.08
 sleep 0.7
-type_effect "<WELCOME 3X FAMILY USER>" 0.08
+type_effect "<WELCOME CODEX TEAM FAMILY USER>" 0.08
 sleep 0.2
-type_effect "[YOUR FRIEND 3X HACKER]" 0.08
+type_effect "[YOUR FRIEND CODEX X]" 0.08
 sleep 0.5
 type_effect "!...............¡" 0.08
 echo
@@ -130,7 +130,7 @@ sleep 2
 clear 
 }
 start
-mkdir -p .3x-hacker
+mkdir -p .codex-x
 tr() {
 # Check if curl is installed
 if command -v curl &>/dev/null; then
@@ -196,8 +196,8 @@ echo
     fi
     
     rm -rf data/data/com.termux/files/usr/bin/chat >/dev/null 2>&1
-    if [ ! -f "$HOME/.Codex-simu/report" ]; then
-        mv $HOME/CODEX/files/report $HOME/.Codex-simu &
+    if [ ! -f "$HOME/.Codex-x/report" ]; then
+        mv $HOME/CODEX/files/report $HOME/.Codex-x &
         show_spinner "Codex-report"
     fi
     if [ ! -f "/data/data/com.termux/files/usr/bin/chat" ]; then
@@ -269,7 +269,7 @@ clear
 clear
 echo
 echo -e "               ${g}╔═══════════════╗"
-echo -e "               ${g}║ ${n}</>  ${c}3X-HACKER${g}  ║"
+echo -e "               ${g}║ ${n}</>  ${c} CODEX X${g}  ║"
 echo -e "               ${g}╚═══════════════╝"
 echo -e "  ${g}╔════════════════════════════════════════════╗"
 echo -e "  ${g}║  ${C} ${y}Checking Your Internet Connection¡${g}  ║"
@@ -340,7 +340,7 @@ donotchange() {
         echo
         echo -e "		        ${g}Hey ${y}$name"
         echo -e "${c}              (\_/)"
-        echo -e "              (${y}^ω^${c})     ${g}I'm Dx-Simu${c}"
+        echo -e "              (${y}^ω^${c})     ${g}I'm codex-x${c}"
         echo -e "             ⊂(___)づ  ⋅˚₊‧ ଳ ‧₊˚ ⋅"
         echo
         echo -e " ${A} ${c}Your Banner created ${g}Successfully¡${c}"
@@ -368,21 +368,21 @@ echo -e "
 echo -e "   
 echo -e 
 echo -e "${y}               +-+-+-+-+-+-+-+-+"
-echo -e "${c}               |3|X|-|H|A|C|K|E|R|"
+echo -e "${c}               |C|X|-|H|A|C|K|E|R|"
 echo -e "${y}               +-+-+-+-+-+-+-+-+${n}"
 echo
  if [ $random_number -eq 0 ]; then
 echo -e "${b}╭════════════════════════⊷"
-echo -e "${b}┃ ${g}[${n}ム${g}] ᴛɢ: ${y}t.me/xhacker60"
+echo -e "${b}┃ ${g}[${n}ム${g}] ᴛɢ: ${y}t.me/CODEX_HACKER_X"
 echo -e "${b}╰════════════════════════⊷"
         else
 echo -e "${b}╭══════════════════════════⊷"
-echo -e "${b}┃ ${g}[${n}ム${g}] ᴛɢ: ${y}t.me/xhacker60"
+echo -e "${b}┃ ${g}[${n}ム${g}] ᴛɢ: ${y}t.me/CODEX_HACKER_X"
 echo -e "${b}╰══════════════════════════⊷"
         fi
 echo
-echo -e "${b}╭══ ${g}3X${y}X HACKER ${g}〄"
-echo -e "${b}┃❁ ${g}ᴄʀᴇᴀᴛᴏʀ: ${y}3X-HACKER"
+echo -e "${b}╭══ ${g}CODEX${y}X HACKER${g}〄"
+echo -e "${b}┃❁ ${g}ᴄʀᴇᴀᴛᴏʀ: ${y}CODEX-X"
 echo -e "${b}┃❁ ${g}ᴅᴇᴠɪᴄᴇ: ${y}${VENDOR} ${MODEL}"
 echo -e "${b}╰┈➤ ${g}Hey ${y}Dear"
 echo
@@ -449,21 +449,21 @@ echo
 echo
 echo -e "   ${y}"
 echo -e "${y}               +-+-+-+-+-+-+-+-+"
-echo -e "${c}               |3|X|-|H|A|C|K|E|R|"
+echo -e "${c}               |C|X|-|H|A|C|K|E|R|"
 echo -e "${y}               +-+-+-+-+-+-+-+-+${n}"
 echo
  if [ $random_number -eq 0 ]; then
 echo -e "${b}╭════════════════════════⊷"
-echo -e "${b}┃ ${g}[${n}ム${g}] ᴛɢ: ${y}t.me/xhacker60"
+echo -e "${b}┃ ${g}[${n}ム${g}] ᴛɢ: ${y}t.me/CODEX_HACKER_X"
 echo -e "${b}╰════════════════════════⊷"
         else
 echo -e "${b}╭══════════════════════════⊷"
-echo -e "${b}┃ ${g}[${n}ム${g}] ᴛɢ: ${y}t.me/xhacker60"
+echo -e "${b}┃ ${g}[${n}ム${g}] ᴛɢ: ${y}t.me/CODEX_HACKER_X"
 echo -e "${b}╰══════════════════════════⊷"
         fi
 echo
-echo -e "${b}╭══ ${g}3X ${y}HACKER${g}〄"
-echo -e "${b}┃❁ ${g}ᴄʀᴇᴀᴛᴏʀ: ${y}3X HACKER"
+echo -e "${b}╭══ ${g}CX${y}HACKER${g}〄"
+echo -e "${b}┃❁ ${g}ᴄʀᴇᴀᴛᴏʀ: ${y}CODEX-X-HACKER"
 echo -e "${b}╰┈➤ ${g}Hey ${y}Dear"
 echo
 echo -e "${c}╭════════════════════════════════════════════════⊷"
@@ -521,7 +521,7 @@ while true; do
             "Premium")
                 echo -e "\n ${g}[${n}${HOST}${g}] ${c}Wait for opening Telegram..!${n}"
                 sleep 1
-                xdg-open "t.me/xhacker60"
+                xdg-open "t.me/CODEX_HACKER_X"
                 cd "$HOME"
             	rm -rf CODEX
                 exit 0
